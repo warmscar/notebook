@@ -12,11 +12,25 @@
   <link rel="icon" href="./_imgs/favicon.ico">
   <!-- 修改侧边栏样式 -->
   <style>
+    .sidebar > h1 {
+      margin: 0px auto 2rem;
+    }
     .sidebar-nav a {
       font-size: 16px !important;
     }
     .sidebar-nav ul {
-      padding: 25px;
+      margin: 0px;
+    }
+    .sidebar-nav ul li a {
+      padding: 6px 45px;
+    }
+    .sidebar-nav ul li a:hover {
+      text-decoration: none;
+      background-color: #f5e1b7;
+    }
+    /* 第二层中目录左边距 */
+    .sidebar-nav ul strong {
+      margin: 30px;
     }
   </style>
 </head>
@@ -27,7 +41,7 @@
       name: 'Warmscar\'s Blog', // 展示在侧边栏顶部的标题
       repo: 'https://github.com/warmscar', // 右上角的挂件
       coverpage: true, // 封面
-      themeColor: '#25798A', // 主题色
+      themeColor: '#fc6e51', // 主题色
       loadSidebar: true, // 侧边栏
       loadNavbar: true, // 导航栏
       auto2top: true, // 切换页面后跳转到页面顶部
@@ -51,7 +65,7 @@
       // 进度条配置
       progress: {
         position: "bottom",
-        color: "var(--theme-color,#25798A)",
+        color: "var(--theme-color,#fc6e51)",
         height: "3px",
       },
       // 字数统计
