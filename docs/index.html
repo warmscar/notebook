@@ -32,6 +32,13 @@
     .sidebar-nav ul strong {
       margin: 30px;
     }
+    .app-sub-sidebar li:before {
+      content: "";
+    }
+    .app-sub-sidebar li a:before {
+      content: "🍺";
+      visibility: hidden;
+    }
   </style>
 </head>
 <body>
@@ -44,6 +51,7 @@
       themeColor: '#fc6e51', // 主题色
       loadSidebar: true, // 侧边栏
       loadNavbar: true, // 导航栏
+      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
       auto2top: true, // 切换页面后跳转到页面顶部
       autoHeader: true, // 自动根据侧边栏标题为每个页面添加标题
       maxLevel: 2, // 默认渲染的标题层级
@@ -62,12 +70,6 @@
         nextText: 'NEXT',
         crossChapter: true
       },
-      // 进度条配置
-      progress: {
-        position: "bottom",
-        color: "var(--theme-color,#fc6e51)",
-        height: "3px",
-      },
       // 字数统计
       count: {
         position: "bottom"
@@ -84,8 +86,6 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 复制代码块插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 阅读进度条 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
   <!-- 字数统计 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
 </body>
